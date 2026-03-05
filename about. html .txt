@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Nduati - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <h1 class="text-xl font-bold">Joseph Nduati</h1>
+            <ul class="flex gap-4 text-sm sm:gap-6 sm:text-base">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline font-semibold">About</a></li>
+                <li><a href="projects.html" class="hover:underline">Projects</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- PROFILE SECTION -->
+        <section class="p-8 text-center bg-white">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex justify-center mb-6">
+                    <div class="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-blue-600 flex items-center justify-center text-white text-6xl font-bold">
+                        JN
+                    </div>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">About Me</h2>
+                <p class="text-gray-700 max-w-3xl mx-auto text-lg leading-relaxed">
+                    I'm a passionate web developer based in Nairobi, Kenya with a love for creating 
+                    beautiful, functional websites. I believe in writing clean, semantic code and 
+                    building user-friendly experiences that work on all devices.
+                </p>
+            </div>
+        </section>
+
+        <!-- BIO SECTION -->
+        <section class="p-8 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">My Journey</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-xl mb-3 text-blue-600">Background</h4>
+                        <p class="text-gray-700">I started coding in 2024 and immediately fell in love with web development. What started as a hobby quickly became a passion for creating digital experiences.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h4 class="font-bold text-xl mb-3 text-blue-600">Education</h4>
+                        <p class="text-gray-700">Self-taught developer with certificates from online platforms. Constantly learning and staying updated with the latest web technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="p-8 bg-white">
+            <h2 class="text-2xl font-bold text-center mb-8">My Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="p-6 border rounded-xl shadow-md bg-white hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2 text-blue-600">HTML5</h3>
+                    <p class="text-gray-600">Semantic markup, accessibility, SEO-friendly structure</p>
+                </div>
+                <div class="p-6 border rounded-xl shadow-md bg-white hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2 text-blue-600">CSS3</h3>
+                    <p class="text-gray-600">Flexbox, Grid, animations, responsive design</p>
+                </div>
+                <div class="p-6 border rounded-xl shadow-md bg-white hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2 text-blue-600">JavaScript</h3>
+                    <p class="text-gray-600">DOM manipulation, ES6+, interactive features</p>
+                </div>
+                <div class="p-6 border rounded-xl shadow-md bg-white hover:shadow-lg transition">
+                    <h3 class="font-bold text-xl mb-2 text-blue-600">Tailwind CSS</h3>
+                    <p class="text-gray-600">Utility-first styling, rapid development</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+        <p>© 2026 Joseph Nduati. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
