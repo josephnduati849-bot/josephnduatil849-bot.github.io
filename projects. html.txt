@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Nduati - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <h1 class="text-xl font-bold">Joseph Nduati</h1>
+            <ul class="flex gap-4 text-sm sm:gap-6 sm:text-base">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="projects.html" class="hover:underline font-semibold">Projects</a></li>
+                <li><a href="contact.html" class="hover:underline">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="p-8">
+        <h2 class="text-3xl font-bold text-center mb-4">My Projects</h2>
+        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Here are some of the projects I've built. Each one taught me something new!</p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <!-- Project 1 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                <div class="h-48 bg-gradient-to-r from-blue-400 to-blue-600 flex items-center justify-center text-white text-4xl font-bold">
+                    P1
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2">Portfolio Website</h3>
+                    <p class="text-gray-600 mb-4">A responsive portfolio built with HTML and Tailwind CSS. Features semantic markup and mobile-first design.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">Tailwind</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Responsive</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                <div class="h-48 bg-gradient-to-r from-green-400 to-green-600 flex items-center justify-center text-white text-4xl font-bold">
+                    P2
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2">Weather App</h3>
+                    <p class="text-gray-600 mb-4">A weather application that shows current weather data using JavaScript and a weather API.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">API</span>
+                        <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                <div class="h-48 bg-gradient-to-r from-purple-400 to-purple-600 flex items-center justify-center text-white text-4xl font-bold">
+                    P3
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2">Task Manager</h3>
+                    <p class="text-gray-600 mb-4">A simple task management app with local storage to save your todos.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">LocalStorage</span>
+                        <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                    </div>
+                    <a href="#" class="text-blue-600 font-semibold hover:underline">View Project →</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition">
+                <div class="h-48 bg-gradient-to-r from-orange-400 to-orange-600 flex items-center justify-center text-white text-4xl font-bold">
+                    P4
+                </div>
+                <div class="p-6">
+                    <h3 class="font-bold text-2xl mb-2">Coming Soon</h3>
+                    <p class="text-gray-600 mb-4">An exciting new project currently in development. Stay tuned!</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">In Progress</span>
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">2026</span>
+                    </div>
+                    <span class="text-gray-400 font-semibold">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>© 2026 Joseph Nduati. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
