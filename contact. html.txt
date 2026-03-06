@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Nduati - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-blue-600 text-white p-4 shadow-lg">
+        <div class="flex justify-between items-center max-w-6xl mx-auto">
+            <h1 class="text-xl font-bold">Joseph Nduati</h1>
+            <ul class="flex gap-4 text-sm sm:gap-6 sm:text-base">
+                <li><a href="index.html" class="hover:underline">Home</a></li>
+                <li><a href="about.html" class="hover:underline">About</a></li>
+                <li><a href="projects.html" class="hover:underline">Projects</a></li>
+                <li><a href="contact.html" class="hover:underline font-semibold">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="p-8">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-2">Get In Touch</h2>
+            <p class="text-center text-gray-600 mb-8">I'd love to hear from you! Fill out the form below.</p>
+
+            <!-- CONTACT INFO CARDS -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="text-2xl mb-2">📱</div>
+                    <h3 class="font-semibold">Phone</h3>
+                    <p class="text-gray-600">0792359374</p>
+                </div>
+                <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                    <div class="text-2xl mb-2">📧</div>
+                    <h3 class="font-semibold">Email</h3>
+                    <p class="text-gray-600">josephnduati849@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- CONTACT FORM WITH VALIDATION -->
+            <form class="max-w-2xl mx-auto space-y-6 bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-center mb-6">Send Me a Message</h3>
+                
+                <!-- Name Field with Validation -->
+                <div>
+                    <label class="block text-left font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
+                    <input 
+                        type="text" 
+                        name="name"
+                        placeholder="John Doe"
+                        class="w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                        required
+                        minlength="2"
+                        title="Name must be at least 2 characters"
+                    >
+                    <p class="text-xs text-gray-500 mt-1">Minimum 2 characters</p>
+                </div>
+
+                <!-- Email Field with Validation -->
+                <div>
+                    <label class="block text-left font-medium mb-2">Email Address <span class="text-red-500">*</span></label>
+                    <input 
+                        type="email" 
+                        name="email"
+                        placeholder="your.email@example.com"
+                        class="w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                        required
+                        title="Please enter a valid email address"
+                    >
+                    <p class="text-xs text-gray-500 mt-1">We'll never share your email</p>
+                </div>
+
+                <!-- Message Field with Validation -->
+                <div>
+                    <label class="block text-left font-medium mb-2">Message <span class="text-red-500">*</span></label>
+                    <textarea 
+                        rows="5"
+                        name="message"
+                        placeholder="Write your message here..."
+                        class="w-full p-3 border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+                        required
+                        minlength="10"
+                        title="Message must be at least 10 characters"
+                    ></textarea>
+                    <p class="text-xs text-gray-500 mt-1">Minimum 10 characters</p>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                    type="submit"
+                    class="w-full bg-blue-600 text-white px-6 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition transform hover:scale-105"
+                >
+                    Send Message 📨
+                </button>
+
+                <!-- Form Note -->
+                <p class="text-xs text-gray-400 text-center mt-4">
+                    Fields marked with <span class="text-red-500">*</span> are required
+                </p>
+            </form>
+
+            <!-- Alternative Contact -->
+            <div class="text-center mt-8 text-gray-600 bg-blue-50 p-4 rounded-lg">
+                <p class="font-semibold">Prefer email? Write to me directly:</p>
+                <p class="text-blue-600">josephnduati849@gmail.com</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 text-white text-center p-4 mt-8">
+        <p>© 2026 Joseph Nduati. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
