@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Tadashi Hamad</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Internal CSS (instead of external styles.css) -->
+    <style>
+        /* ===== RESET & BASE STYLES ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ===== TYPOGRAPHY - Google Fonts ===== */
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* ===== TYPOGRAPHY STYLES ===== */
+        h1, h2, h3 {
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            color: #2c3e50;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: #3498db;
+        }
+
+        /* ===== NAVIGATION - FLEXBOX ===== */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* ===== ABOUT SECTION ===== */
+        .about-section {
+            padding: 4rem 0;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin-bottom: 2rem;
+            object-fit: cover;
+        }
+
+        .about-text {
+            max-width: 600px;
+            margin: 1rem auto 0;
+            font-size: 1.1rem;
+        }
+
+        /* ===== SKILLS SECTION - FLEXBOX ===== */
+        .skills-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            flex: 1 1 200px;
+            max-width: 250px;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-card h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* ===== GALLERY SECTION - CSS GRID ===== */
+        .gallery-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-section {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .contact-phone {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #2c3e50;
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        .btn-submit {
+            background-color: #3498db;
+            color: white;
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            background-color: #2980b9;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* ===== MOBILE-FIRST RESPONSIVE DESIGN ===== */
+        /* Mobile styles (up to 768px) */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .skills-container {
+                gap: 1rem;
+            }
+
+            .skill-card {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* Tablet styles (769px to 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .skills-container {
+                gap: 1.5rem;
+            }
+
+            .skill-card {
+                flex: 1 1 calc(50% - 1.5rem);
+                max-width: calc(50% - 1.5rem);
+            }
+        }
+
+        /* Desktop styles (1025px and up) */
+        @media (min-width: 1025px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* Small mobile devices (up to 480px) */
+        @media (max-width: 480px) {
+            .container {
+                width: 95%;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .skill-card {
+                padding: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group input,
+            .form-group textarea {
+                padding: 0.5rem;
+            }
+
+            .btn-submit {
+                padding: 0.5rem 1.5rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .navbar,
+            .footer,
+            .btn-submit {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION BAR - FLEXBOX -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Tadashi Hamad</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO / ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <img 
+                src="https://i.pravatar.cc/200" 
+                alt="Profile Photo"
+                class="profile-img"
+            >
+            <h2>Hi, I'm Tadashi Hamad</h2>
+            <p class="about-text">
+                I'm a passionate web developer based in Nairobi, Kenya.
+                I love building beautiful websites and learning HTML, CSS,
+                and JavaScript to create amazing user experiences.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION - FLEXBOX -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Semantic markup and page structure</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Styling, layout, and animations</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Interactive features and logic</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-friendly websites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION - CSS GRID -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=1" alt="Project 1">
+                    <div class="overlay">Project 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=2" alt="Project 2">
+                    <div class="overlay">Project 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=3" alt="Project 3">
+                    <div class="overlay">Project 3</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=4" alt="Project 4">
+                    <div class="overlay">Project 4</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=5" alt="Project 5">
+                    <div class="overlay">Project 5</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://picsum.photos/300/300?random=6" alt="Project 6">
+                    <div class="overlay">Project 6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <p class="contact-phone">📞 0792359374</p>
+            
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input 
+                        type="text" 
+                        id="name"
+                        placeholder="Tadashi Hamad"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input 
+                        type="email" 
+                        id="email"
+                        placeholder="josephnduati849@gmail.com"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message"
+                        rows="4"
+                        placeholder="Write your message here..."
+                    ></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>© 2026 Tadashi Hamad. Built with ❤️, Flexbox, and Grid.</p>
+    </footer>
+</body>
+</html>
